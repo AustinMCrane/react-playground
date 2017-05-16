@@ -1,17 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Todo = styled.div``;
+const Todo = styled.div`
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #eee;
+`;
 const TodoListItem = ({ todo }) => {
     const {
         name,
         id,
     } = todo;
     return (
-        <div key={id}>
+        <Todo key={id}>
             <strong>{name}</strong>
             <button>close</button>
-        </div>
+        </Todo>
     );
 }
 const TodoList = ({ todos }) => {
